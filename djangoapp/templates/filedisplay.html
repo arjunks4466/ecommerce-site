@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+  <tr>
+      <th>id</th>
+      <th>fname</th>
+      <th>fileimage</th>
+      <th>description</th>
+  </tr>
+
+</table>
+        {% for i,j,k,l in data %}
+        <tr>
+            <td>{{i}}</td>
+            <td>{{j}}</td>
+            <td><img src="{% static k %}" width="200px" height="150px"></td>
+            <td>{{l}}</td>
+        </tr>
+
+        {% endfor %}
+
+</body>
+</html>

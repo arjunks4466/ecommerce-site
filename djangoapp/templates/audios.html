@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post" enctype="multipart/form-data">{% csrf_token %}
+  <input type="text" name="audioname"><br>
+  <input type="file" name="audio"><br>
+  <input type="text" name="videoname"><br>
+  <input type="file" name="video"><br>
+  <input type="text" name="pdfname"><br>
+  <input type="file" name="pdf"><br>
+  <input type="submit">
+</form>
+</body>
+</html>

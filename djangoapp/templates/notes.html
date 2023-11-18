@@ -1,0 +1,84 @@
+# register authenticated users using user model and login using email and password using
+# class based view.
+
+
+# form valid()
+---------------
+# to check the form validation we use the form_valid method.
+# commit=flase - in form.save, commit=false indicates that data is not immediately saved to the database.
+
+
+
+# generic
+------------------
+
+# is a django inbuilt view parent class
+# they are the advanced set of built in views that are used to implement the selective CRUD (Create Read Update Method)
+# using class based views we can easily handle the get, post request for a view.
+# 2 types
+----------
+# post()- it is used to input a data into a database field
+# we register, login , upload file using post()
+
+# get()- it is used to retrieve data from a database.
+
+
+# classes provided by generic
+------------------------------
+# 1. Createview:- it is a view that is used for creating an instance/object.
+# 2. Listview:- it is a view that is used to list all instance.
+# 3. Updateview:- it is a view that is used for editing an existing object and saving changes.
+# 4. Deleteview:- it is a view that is used to delete an existing object.
+# 5. Detailview:- it is a view that is used to get a single instance.
+
+
+# register authenticated users using user model and login using email and password using
+# class based view.
+**********************************************************************************************************
+
+
+#                                     API integration
+                                 ------------------------
+# REST API
+---------------
+# What is REST ? - Django rest is powerful and flexible tool kit for building well API's. the REST that
+#  stands for "Representational State Transfer" can be made up of one or more resources that can be accessed at a
+#  given url and it returns various formats like json, images, html and more.
+
+# What is API ? - "Application Programming Interface". It act as a bridge between two or more software interface
+#  which offering a service to other pieces software. Simply we can say that it enable two software components to
+#  communicate with each other.
+
+
+def read_response():
+    with open(r"location\movie.json",r",encoding="utf8") as f:
+    data=json.load(f)
+#json.load is a function that is used to convert a json format into python dictionary
+    return data
+class MyResponse(APIView):
+    def get(self,request):
+        pdf=[]
+        img=[]
+        video=[]
+        audio=[]
+        data=read_response()
+
+#django project--
+
+class MyTodos(APIView):
+    def get(sel,request):
+        data=read_todos()
+        return render(request,'index.html',{'data':data})
+
+
+paste ur media folder into ur django project file.
+create a function for loading ur json file
+create a function read_media() for open ur json file
+create a class to get ur datas and pass it to the frontend.
+load the datas in a html file.
+
+
+'https://fakestoreapi.com/products'
+
+
+how to use a fake api using java script.

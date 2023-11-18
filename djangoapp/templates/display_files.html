@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="1">
+     <tr>
+          <th>id</th>
+           <th>pdf name</th>
+           <th>pdf file</th>
+           <th>audio name</th>
+           <th>audio file</th>
+            <th>video name</th>
+            <th>video file</th>
+            <th>delete</th>
+             <th>detail</th>
+             <th>update</th>
+     </tr>
+  {% for i in file %}
+  <tr>
+    <td>{{i.id}}</td>
+    <td>{{i.pdfname}}</td>
+    <td><a href="{{i.pdf.url}}"  download>click here to download</a></td>
+    <td>{{i.audioname}}</td>
+    <td><audio controls ><source src="{{i.audio.url}}"></audio></td>
+    <td>{{i.videoname}}</td>
+    <td><video controls height="250px" width="250px" ><source src="{{i.video.url}}"></video></td>
+    <td><a href="http://127.0.0.1:8000/djangoapp/deletefile/{{i.id}}"><button>delete</button></a></td>
+    <td><a href="http://127.0.0.1:8000/djangoapp/detailfile/{{i.id}}"><button>detail</button></a></td>
+    <td><a href="http://127.0.0.1:8000/djangoapp/update_file/{{i.id}}"><button>update</button></a></td>
+  </tr>
+    {% endfor %}
+</table>
+</body>
+</html>

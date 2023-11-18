@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>file display</h1>
+<ul>
+    {% for i in files %}
+    <li>
+        <h2>{{ i.itemname }}</h2>
+<!--        <img src="{% static 'i.image' %}">-->
+        <img src="{{ i.image.url }}">
+        <p>ID:{{ i.id }}</p>
+    </li>
+    {% endfor %}
+</ul>
+
+</body>
+</html>

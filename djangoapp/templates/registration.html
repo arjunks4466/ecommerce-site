@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        body {
+            background-color:black;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        th {
+            width: 150px;
+            color: white;
+            text-align: justify;
+        }
+
+        table {
+            margin-left: 50px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div style="width: 500px;height: 600px;  margin-top: 50px;margin-left: 500px; ">
+        <form method="post">{% csrf_token %}
+            <h1 style="color: white; margin-left: 82px;">Registration page</h1>
+            <table>
+                <tr>
+                    <th>
+                        <label for=""> First Name :</label>
+                    </th>
+                    <td>
+                        <input type="text" name="fname">
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <label for="" > Last Name :</label>
+                    </th>
+                    <td>
+                        <input type="text" name="lname">
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <label for="" name="uname">User name :</label>
+                    </th>
+                    <td><input type="text" name="uname"></td>
+                </tr>
+                <tr>
+                    <th><label for="" name="emil">Email :</label></th>
+                    <td><input type="email" name="email"></td>
+                </tr>
+                <tr>
+                    <th><label for="" name="phone">Phone :</label></th>
+                    <td><input type="text" name="phone"></td>
+                </tr>
+                <tr>
+                    <th> <label for="" name="gender">Gender :</label></th>
+                    <td style="color: white;">
+                        <input type="checkbox" name="gender">male
+                        <input type="checkbox" name="gender">Female
+                    </td>
+
+
+
+                </tr>
+                <tr>
+                    <th><label for="" name="address">Address :</label></th>
+                    <td> <textarea name="address" id="" cols="30" rows="4"></textarea></td>
+                </tr>
+                <tr>
+                    <th><label for="" name="dob">DOB</label></th>
+                    <td><input type="date" name="dob"></td>
+                </tr>
+                <tr>
+                    <th><label for="" name="password">Password :</label></th>
+                    <td><input type="password" name="password" ></td>
+                </tr>
+                <tr>
+                    <th><label for="" name="cpassword">Confirm password :</label></th>
+                    <td><input type="password" name="cpassword" ></td>
+                </tr>
+
+                <tr>
+                    <th colspan="2">
+                        <button type="submit"
+                                style="background-color: red; margin-top: 20px;">Register</button>
+                    </th>
+                </tr>
+            </table>
+
+        </form>
+
+    </div>
+</body>
+
+</html>

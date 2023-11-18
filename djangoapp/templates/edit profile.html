@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Edit profile</h1>
+<form method="post">{% csrf_token %}
+
+    <label>First_name</label>
+    <input type="text" name="First_name" value="{{data.First_name}}">
+    <label>Last_name</label>
+    <input type="text" name="Last_name" value="{{data.Last_name}}">
+    <label>user_name</label>
+    <input type="text" name="user_name" value="{{data.user_name}}">
+    <label>email</label>
+    <input type="email" name="email" value="{{data.email}}">
+    <label>phone</label>
+    <input type="number" name="phone" value="{{data.phone}}">
+    <label>gender</label>
+    <p>gender:{{data.gender}}</p>
+    <input type="radio" name="gender" value="male">male
+    <input type="radio" name="gender" value="female">female
+    <label>address</label>
+    <input type="text" name="address" value="{{data.address}}">
+    <p>dob:{{data.dob}}</p>
+    <label>dob</label>
+    <input type="date" name="dob" value="{{data.dob}}">
+    <label>password</label>
+    <input type="password" name="password" value="data.password">
+    <input type="submit" value="update">
+</form>
+</body>
+</html>
